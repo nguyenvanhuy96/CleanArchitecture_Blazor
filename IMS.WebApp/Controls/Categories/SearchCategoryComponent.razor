@@ -1,0 +1,21 @@
+﻿<div class="input-group">
+	<input  type="text" 
+		class= "form-control" 
+		placeholder= "Type Category name here to search"
+		@bind-value ="categoryNameToSearch"/>
+	<button type="button" class ="btn-success" @onclick="OnSearch">Search</button>
+</div>
+
+
+@code {
+	private string categoryNameToSearch = string.Empty;
+
+	[Parameter]
+	public EventCallback<string> OnSearchCategory{ get; set; }
+
+	private void OnSearch()
+	{
+		OnSearchCategory.InvokeAsync(categoryNameToSearch);
+	}
+
+}

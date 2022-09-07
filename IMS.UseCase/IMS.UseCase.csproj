@@ -7,9 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Category\" />
-    <Folder Include="Product\" />
-    <Folder Include="PluginInterfaces\" />
+    <ProjectReference Include="..\IMS.CoreBusiness\IMS.CoreBusiness.csproj" />
   </ItemGroup>
 
 </Project>

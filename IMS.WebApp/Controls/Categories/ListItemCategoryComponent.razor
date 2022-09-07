@@ -1,0 +1,28 @@
+﻿@inject NavigationManager NavigationManager
+@if (categories != null && categories.Count > 0)
+{
+	@foreach (var pro in categories)
+	{
+		<tr>
+			<td>@pro.Name</td>
+			<td>
+				<div>
+					<img src="@pro.Image" style="width:32px; height: 32px;"/>
+				</div>
+			</td>
+			<td>@pro.Description</td>
+			<td>
+				<button type="button" class="btn btn-light" @onclick="@(()=> EditCategory(pro.Id))">Edit</button>
+			</td>
+		</tr>	
+	}
+} 
+@code {
+	[Parameter]
+	public List<Category> categories { get; set; } = new List<Category>();
+
+	private void EditCategory(int categoryId)
+	{
+		NavigationManager.NavigateTo($"/editcategory/{categoryId}");
+	}
+}

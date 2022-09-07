@@ -1,0 +1,27 @@
+﻿
+@inject IViewCategoriesByNameUseCase ViewCategoriesByNameUseCase
+<table class="table">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Description</th>
+			<th>Image</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<ListItemCategoryComponent categories="categories"></ListItemCategoryComponent>
+	</tbody>
+</table>
+
+
+@code {
+	private List<Category> categories = new List<Category>();
+	[Parameter]
+	public string SearchTerm { get; set; } = string.Empty;
+
+	protected override async Task OnParametersSetAsync()
+	{
+		categories = (await ViewCategoriesByNameUseCase.ExcuteAsync(this.SearchTerm)).ToList();
+	}
+}

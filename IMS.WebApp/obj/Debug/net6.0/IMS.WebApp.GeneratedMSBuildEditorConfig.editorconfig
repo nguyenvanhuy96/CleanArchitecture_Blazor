@@ -19,6 +19,42 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/HUY NGUYEN/Desktop/IMS.WebApp/IMS.WebApp/Controls/Categories/ListCategoryComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29udHJvbHNcQ2F0ZWdvcmllc1xMaXN0Q2F0ZWdvcnlDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HUY NGUYEN/Desktop/IMS.WebApp/IMS.WebApp/Controls/Categories/ListItemCategoryComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29udHJvbHNcQ2F0ZWdvcmllc1xMaXN0SXRlbUNhdGVnb3J5Q29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HUY NGUYEN/Desktop/IMS.WebApp/IMS.WebApp/Controls/Categories/SearchCategoryComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29udHJvbHNcQ2F0ZWdvcmllc1xTZWFyY2hDYXRlZ29yeUNvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HUY NGUYEN/Desktop/IMS.WebApp/IMS.WebApp/Controls/Products/ListItemProductComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29udHJvbHNcUHJvZHVjdHNcTGlzdEl0ZW1Qcm9kdWN0Q29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HUY NGUYEN/Desktop/IMS.WebApp/IMS.WebApp/Controls/Products/ListProductComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29udHJvbHNcUHJvZHVjdHNcTGlzdFByb2R1Y3RDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HUY NGUYEN/Desktop/IMS.WebApp/IMS.WebApp/Controls/Products/SearchProductComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29udHJvbHNcUHJvZHVjdHNcU2VhcmNoUHJvZHVjdENvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HUY NGUYEN/Desktop/IMS.WebApp/IMS.WebApp/Pages/Categories/CategoryAdd.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcmllc1xDYXRlZ29yeUFkZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HUY NGUYEN/Desktop/IMS.WebApp/IMS.WebApp/Pages/Categories/CategoryEdit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcmllc1xDYXRlZ29yeUVkaXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HUY NGUYEN/Desktop/IMS.WebApp/IMS.WebApp/Pages/Categories/CategoryList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcmllc1xDYXRlZ29yeUxpc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/HUY NGUYEN/Desktop/IMS.WebApp/IMS.WebApp/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -29,6 +65,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/HUY NGUYEN/Desktop/IMS.WebApp/IMS.WebApp/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HUY NGUYEN/Desktop/IMS.WebApp/IMS.WebApp/Pages/Products/ProductAdd.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdHNcUHJvZHVjdEFkZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HUY NGUYEN/Desktop/IMS.WebApp/IMS.WebApp/Pages/Products/ProductEdit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdHNcUHJvZHVjdEVkaXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HUY NGUYEN/Desktop/IMS.WebApp/IMS.WebApp/Pages/Products/ProductList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdHNcUHJvZHVjdExpc3QucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/HUY NGUYEN/Desktop/IMS.WebApp/IMS.WebApp/Shared/SurveyPrompt.razor]

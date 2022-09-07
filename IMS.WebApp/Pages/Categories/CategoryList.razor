@@ -1,0 +1,22 @@
+﻿@page "/categories"
+
+@inject NavigationManager NavigationManager
+
+<h3>Category List</h3>
+<SearchCategoryComponent OnSearchCategory="onCategorySearch"></SearchCategoryComponent>
+<ListCategoryComponent SearchTerm="@searchTerm"></ListCategoryComponent>
+<br/>
+<button type="button" class="btn btn-primary" @onclick="AddCategory"> Add Category</button>
+
+@code {
+
+	private string searchTerm = string.Empty;
+	private void onCategorySearch(string searchTerm)
+	{
+		this.searchTerm = searchTerm;
+	}
+	private void AddCategory()
+	{
+		NavigationManager.NavigateTo("/addcategory");
+	}
+}

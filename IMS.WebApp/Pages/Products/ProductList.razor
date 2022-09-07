@@ -1,0 +1,21 @@
+﻿@page "/products"
+
+@inject NavigationManager NavigationManager
+
+<h3>Category List</h3>
+<SearchProductComponent OnSearchProduct="onProductSearch"></SearchProductComponent>
+<ListProductComponent SearchTerm="@searchTerm"></ListProductComponent>
+<br/>
+<button type="button" class="btn btn-primary" @onclick="AddProduct"> Add Product</button>
+
+@code {
+	private string searchTerm = string.Empty;
+	private void onProductSearch(string searchTerm)
+	{
+		this.searchTerm = searchTerm;
+	}
+	private void AddProduct()
+	{
+		NavigationManager.NavigateTo("/addproduct");
+	}
+}

@@ -1,0 +1,15 @@
+C:\Users\HUY NGUYEN\Desktop\IMS.WebApp\IMS.UseCase\bin\Debug\net6.0\IMS.UseCase.deps.json
+C:\Users\HUY NGUYEN\Desktop\IMS.WebApp\IMS.UseCase\bin\Debug\net6.0\IMS.UseCase.dll
+C:\Users\HUY NGUYEN\Desktop\IMS.WebApp\IMS.UseCase\bin\Debug\net6.0\IMS.UseCase.pdb
+C:\Users\HUY NGUYEN\Desktop\IMS.WebApp\IMS.UseCase\bin\Debug\net6.0\IMS.CoreBusiness.dll
+C:\Users\HUY NGUYEN\Desktop\IMS.WebApp\IMS.UseCase\bin\Debug\net6.0\IMS.CoreBusiness.pdb
+C:\Users\HUY NGUYEN\Desktop\IMS.WebApp\IMS.UseCase\obj\Debug\net6.0\IMS.UseCase.csproj.AssemblyReference.cache
+C:\Users\HUY NGUYEN\Desktop\IMS.WebApp\IMS.UseCase\obj\Debug\net6.0\IMS.UseCase.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HUY NGUYEN\Desktop\IMS.WebApp\IMS.UseCase\obj\Debug\net6.0\IMS.UseCase.AssemblyInfoInputs.cache
+C:\Users\HUY NGUYEN\Desktop\IMS.WebApp\IMS.UseCase\obj\Debug\net6.0\IMS.UseCase.AssemblyInfo.cs
+C:\Users\HUY NGUYEN\Desktop\IMS.WebApp\IMS.UseCase\obj\Debug\net6.0\IMS.UseCase.csproj.CoreCompileInputs.cache
+C:\Users\HUY NGUYEN\Desktop\IMS.WebApp\IMS.UseCase\obj\Debug\net6.0\IMS.UseCase.csproj.CopyComplete
+C:\Users\HUY NGUYEN\Desktop\IMS.WebApp\IMS.UseCase\obj\Debug\net6.0\IMS.UseCase.dll
+C:\Users\HUY NGUYEN\Desktop\IMS.WebApp\IMS.UseCase\obj\Debug\net6.0\refint\IMS.UseCase.dll
+C:\Users\HUY NGUYEN\Desktop\IMS.WebApp\IMS.UseCase\obj\Debug\net6.0\IMS.UseCase.pdb
+C:\Users\HUY NGUYEN\Desktop\IMS.WebApp\IMS.UseCase\obj\Debug\net6.0\ref\IMS.UseCase.dll

@@ -1,0 +1,30 @@
+﻿@inject NavigationManager NavigationManager
+@if (products != null && products.Count > 0)
+{
+	@foreach (var pro in products)
+	{
+		<tr>
+			<td>@pro.Name</td>
+		    <td>@pro.CategoryId</td>
+			<td>
+				<div>
+					<img src="@pro.Image" style="width:32px; height: 32px;"/>
+				</div>
+			</td>
+			<td>@pro.Price</td>
+			<td>@pro.Description</td>
+			<td>
+				<button type="button" class="btn btn-light" @onclick="@(()=> EditProduct(pro.Id))">Edit</button>
+			</td>
+		</tr>	
+	}
+} 
+@code {
+	[Parameter]
+	public List<Product> products { get; set; } = new List<Product>();
+
+	private void EditProduct(int productId)
+	{
+		NavigationManager.NavigateTo($"/editproduct/{productId}");
+	}
+}

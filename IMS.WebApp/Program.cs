@@ -1,4 +1,4 @@
-using IMS.Plugins.EFCoreSqlServer;
+﻿using IMS.Plugins.EFCoreSqlServer;
 using IMS.Plugins.InMemory;
 using IMS.UseCase.Category;
 using IMS.UseCase.Category.Interfaces;
@@ -17,14 +17,16 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
 
+// Config sqlserver
 builder.Services.AddDbContextFactory<IMSContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("databasestr"))
 );
 
-// Repositoy IMS.plugins.InMemory
+// Nếu sử dụng project: Repositoy IMS.plugins.InMemory
 //builder.Services.AddSingleton<ICategoryRepository, CategoryRepository>();
 //builder.Services.AddSingleton<IProductRepository, ProductRepository>();
-// Repositoy IMS.plugins.EFCoreSqlServer
+
+// Nếu sử dụng project: Repositoy IMS.plugins.EFCoreSqlServer
 builder.Services.AddSingleton<ICategoryRepository, CategoryEFRepository>();
 builder.Services.AddSingleton<IProductRepository, ProductEFRepository>();
 

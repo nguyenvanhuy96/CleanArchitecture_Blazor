@@ -30,7 +30,6 @@ namespace IMS.Plugins.EFCoreSqlServer
             var inv = await db.Categories.FindAsync(category.Id);
             if (inv != null) return true;
             return false;
-
         }
 
         public async Task<IEnumerable<Category>> GetCategoriesByNameAsync(string name)

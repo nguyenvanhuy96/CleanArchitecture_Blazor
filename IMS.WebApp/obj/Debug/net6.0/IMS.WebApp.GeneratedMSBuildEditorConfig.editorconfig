@@ -43,12 +43,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29udHJvbHNcUHJvZHVjdHNcU2VhcmNoUHJvZHVjdENvbXBvbmVudC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/HUY NGUYEN/Desktop/IMS.WebApp/IMS.WebApp/Pages/Categories/CategoryAdd.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcmllc1xDYXRlZ29yeUFkZC5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/HUY NGUYEN/Desktop/IMS.WebApp/IMS.WebApp/Pages/Categories/CategoryEdit.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcmllc1xDYXRlZ29yeUVkaXQucmF6b3I=
+[C:/Users/HUY NGUYEN/Desktop/IMS.WebApp/IMS.WebApp/Pages/Categories/CategoryAddAndEdit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcmllc1xDYXRlZ29yeUFkZEFuZEVkaXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/HUY NGUYEN/Desktop/IMS.WebApp/IMS.WebApp/Pages/Categories/CategoryList.razor]
@@ -67,12 +63,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/HUY NGUYEN/Desktop/IMS.WebApp/IMS.WebApp/Pages/Products/ProductAdd.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdHNcUHJvZHVjdEFkZC5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/HUY NGUYEN/Desktop/IMS.WebApp/IMS.WebApp/Pages/Products/ProductEdit.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdHNcUHJvZHVjdEVkaXQucmF6b3I=
+[C:/Users/HUY NGUYEN/Desktop/IMS.WebApp/IMS.WebApp/Pages/Products/ProductAddAndEdit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdHNcUHJvZHVjdEFkZEFuZEVkaXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/HUY NGUYEN/Desktop/IMS.WebApp/IMS.WebApp/Pages/Products/ProductList.razor]

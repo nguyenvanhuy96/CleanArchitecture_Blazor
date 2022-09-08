@@ -1,14 +1,15 @@
-﻿
+﻿@page "/addproduct"
 @page "/editproduct/{prodId:int}"  
 
-@inject IEditProductUseCase EditProductUseCase 
 @inject IViewCategoriesByNameUseCase ViewCategoriesByNameUseCase 
+@inject IAddProductUseCase AddProductUseCase 
+@inject IEditProductUseCase EditProductUseCase 
 @inject IViewProductByIdUseCase ViewProductIdUseCase
-@inject NavigationManager NavigationManager
 
-<h3>Product Edit</h3>
+@inject NavigationManager NavigationManager
+<h3>Product Add</h3>
 <br/>
-<EditForm model ="product" OnValidSubmit="SaveProduct">
+<EditForm  model ="product" OnValidSubmit="SaveProduct">
 	<DataAnnotationsValidator></DataAnnotationsValidator>
 	<ValidationSummary></ValidationSummary>
 
@@ -28,7 +29,7 @@
 	</div>
 	<div class="form-group">
 		<label for="price">Price</label>
-		<InputNumber id="price"
+		<InputNumber id="name"
 			@bind-Value="product.Price"
 			class="form-control">
 		</InputNumber>
@@ -58,30 +59,48 @@
 
 @code {
 	[Parameter]
-	public int ProdId{ get; set; }
+	public int? ProdId{ get; set; }
 
 	private Product product = new Product();
 	private List<Category> categories = new List<Category>();
 
 	protected override async Task OnParametersSetAsync()
 	{
-		this.product = await ViewProductIdUseCase.ExcuteAsync(this.ProdId);
+		if (ProdId!=null)
+		{
+			this.product = await ViewProductIdUseCase.ExcuteAsync(this.ProdId.Value);
+			this.categories = (await ViewCategoriesByNameUseCase.ExcuteAsync("")).ToList();
+		}
+	}
+
+	private async Task SaveProduct()
+	{
+		if (ProdId!=null)
+		{
+			await EditProductUseCase.ExcuteAsync(this.product);
+		}
+		else
+		{
+			await AddProductUseCase.ExcuteAsync(product);
+		}
+		
+		NavigationManager.NavigateTo("/products");
+	}
+	protected override async  Task OnInitializedAsync()
+	{
 		this.categories = (await ViewCategoriesByNameUseCase.ExcuteAsync("")).ToList();
 	}
-	public async Task SaveProduct()
-	{
-		await EditProductUseCase.ExcuteAsync(this.product);
-		NavigationManager.NavigateTo("/products");
-	}
+
 	private void OnCancel()
 	{
-		NavigationManager.NavigateTo("/products");
+		NavigationManager.NavigateTo("/categories");
 	}
-    private async Task OnInputFileChange(InputFileChangeEventArgs inputFileChangeEventArgs)
+
+	private async Task OnInputFileChange(InputFileChangeEventArgs inputFileChangeEventArgs)
 	{
 		var fileFormat = "image/png";
 		// get file
-		var imageFile = await inputFileChangeEventArgs.File.RequestImageFileAsync(fileFormat, 1920, 1920);
+	    var imageFile = await inputFileChangeEventArgs.File.RequestImageFileAsync(fileFormat, 250, 250);
 		// convert file into a byte array
 		var buffer = new byte[imageFile.Size];
 		await imageFile.OpenReadStream().ReadAsync(buffer);
@@ -89,4 +108,5 @@
 		string imageDataUrl = $"data:{fileFormat};base64,{Convert.ToBase64String(buffer)}";
 		product.Image = imageDataUrl;
 	}
+    
 }

@@ -1,50 +1,35 @@
-﻿@page "/addproduct"
+﻿@page "/addcategory"
+@page "/editcategory/{catId:int}"  
 
-@inject IViewCategoriesByNameUseCase ViewCategoriesByNameUseCase 
-@inject IAddProductUseCase AddProductUseCase 
+@inject IAddCategoryUseCase AddCategoryUseCase 
+@inject IEditCategoryUseCase EditCategoryUseCase 
+@inject IViewCategoryByIdUseCase ViewCategoryByIdUseCase
+
 @inject NavigationManager NavigationManager
-<h3>Product Add</h3>
+<h3>Category Add</h3>
 <br/>
-<EditForm  model ="product" OnValidSubmit="SaveProduct">
+<EditForm  model ="category" OnValidSubmit="SaveCategory">
 	<DataAnnotationsValidator></DataAnnotationsValidator>
 	<ValidationSummary></ValidationSummary>
 
 	<div class="form-group">
-		<label for="name">Product Name</label>
+		<label for="name">Category Name</label>
 		<InputText id="name"
-			@bind-Value="product.Name"
+			@bind-Value="category.Name"
 			class="form-control">
 		</InputText>
 	</div>
 	<div class="form-group">
 		<label for="description">Description</label>
 		<InputText id="description"
-			@bind-Value="product.Description"
+			@bind-Value="category.Description"
 			class="form-control">
 		</InputText>
 	</div>
 	<div class="form-group">
-		<label for="price">Price</label>
-		<InputNumber id="name"
-			@bind-Value="product.Price"
-			class="form-control">
-		</InputNumber>
-	</div>
-		<div class="form-group">
-		<label for="Category">Category</label>
-		<InputSelect id="name"
-			@bind-Value="product.CategoryId"
-			class="form-control">
-			@foreach (var category in categories)
-			{
-			  <option value="@category.Id">@category.Name</option>
-			}
-		</InputSelect>
-	</div>
-	<div class="form-group">
 		<label for="image">Images</label>
 		<div>
-			<img src="@product.Image" style="width:250px; height: 250px;"/>
+			<img src="@category.Image" style="width:250px; height: 250px;"/>
 		</div>
 		<InputFile OnChange="@OnInputFileChange" class="form-control"></InputFile>
 	</div>
@@ -54,19 +39,27 @@
 </EditForm>
 
 @code {
-	private Product product = new Product();
-	private List<Category> categories = new List<Category>();
+	[Parameter]
+	public int? CatId{ get; set; }
 
-	private async Task SaveProduct()
+	private Category category = new Category();
+	protected override async Task OnParametersSetAsync()
 	{
-		await AddProductUseCase.ExcuteAsync(product);
-		NavigationManager.NavigateTo("/products");
+		if (CatId!=null) this.category = await ViewCategoryByIdUseCase.ExcuteAsync(this.CatId.Value);
 	}
-	protected override async  Task OnInitializedAsync()
+	private async Task SaveCategory()
 	{
-		this.categories = (await ViewCategoriesByNameUseCase.ExcuteAsync("")).ToList();
+		if (CatId != null)
+		{
+			await EditCategoryUseCase.ExcuteAsync(category);
+		}
+		else
+		{
+			await AddCategoryUseCase.ExcuteAsync(category);
+		}
+	
+		NavigationManager.NavigateTo("/categories");
 	}
-
 	private void OnCancel()
 	{
 		NavigationManager.NavigateTo("/categories");
@@ -82,7 +75,7 @@
 		await imageFile.OpenReadStream().ReadAsync(buffer);
 		// convert byte array into a base 64 string
 		string imageDataUrl = $"data:{fileFormat};base64,{Convert.ToBase64String(buffer)}";
-		product.Image = imageDataUrl;
+		category.Image = imageDataUrl;
 	}
     
 }
